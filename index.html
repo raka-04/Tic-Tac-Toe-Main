@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-gray-800 to-gray-900 text-center">
+
+    <div id="mgs-container" class="hidden">
+        <p id="mgs" class="text-4xl font-bold text-green-500 mb-2">Winner</p>
+        <button id="restart" class="New-game">New Game</button>
+    </div>
+    
+    <h1 class="text-cyan-400 w-64 rounded-xl border-4 border-blue-500 m-auto mt-10 p-4 text-4xl font-bold bg-blue-950 text-center shadow-lg">
+        Tic-Tac-Toe
+    </h1>
+    
+    <div class="h-[70vh] flex justify-center items-center">
+        <div class="Outer grid grid-cols-3 gap-2 text-7xl">
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+            <button class="inbox" onclick="handleClick(this)"></button>
+        </div>
+    </div>
+
+    <button id="restart" class="reset">Reset</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
