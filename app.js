@@ -23,12 +23,7 @@ function handleClick(button, index) {
     button.classList.add(currentPlayer === "X" ? "text-cyan-500" : "text-red-500");
 
     if (checkWinner()) {
-        if(currentPlayer === "X"){
-            showWinner("Player 1");
-        }
-        else {
-            showWinner("Player 2");
-        }
+        showWinner(currentPlayer === "X" ? "Player 1" : "Player 2");
         gameActive = false;
         return;
     }
@@ -51,13 +46,13 @@ function checkWinner() {
 function showWinner(winner) {
     mgs.innerText = `🎉 Congratulations! ${winner} Wins!`;
     mgsContainer.classList.remove("hidden");
-    mgsContainer.classList.add("show");
+    mgsContainer.classList.add("flex");
 }
 
 function showDraw() {
     mgs.innerText = "🤝 It's a Draw!";
     mgsContainer.classList.remove("hidden");
-    mgsContainer.classList.add("show");
+    mgsContainer.classList.add("flex");
 }
 
 function resetGame() {
@@ -67,7 +62,7 @@ function resetGame() {
     });
 
     mgsContainer.classList.add("hidden");
-    mgsContainer.classList.remove("show");
+    mgsContainer.classList.remove("flex");
     gameActive = true;
     currentPlayer = "X";
 }
